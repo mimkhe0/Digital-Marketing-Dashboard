@@ -1,0 +1,109 @@
+
+{
+  "name": "Digital Marketing Dashboard",
+  "organization": "Your Organization",
+  "description": "A comprehensive digital marketing dashboard combining GA4, GSC, and Google Ads data",
+  "logoUrl": "https://example.com/logo.png",
+  "organizationUrl": "https://example.com",
+  "supportUrl": "https://example.com/support",
+  "privacyPolicyUrl": "https://example.com/privacy",
+  "termsOfServiceUrl": "https://example.com/terms",
+  "packageUrl": "https://example.com/package",
+  "devMode": true,
+  "components": [
+    {
+      "id": "marketingDashboard",
+      "name": "Marketing Dashboard",
+      "iconUrl": "https://example.com/icon.png",
+      "description": "Interactive marketing dashboard with multiple data sources",
+      "resource": {
+        "js": "myViz.js",
+        "config": "index.html",
+        "css": ""
+      }
+    }
+  ],
+  "dataSetRequirements": {
+    "concepts": [
+      {
+        "id": "dimensions",
+        "name": "Dimensions",
+        "type": "DIMENSION",
+        "supportedTypes": ["TEXT", "YEAR_MONTH_DAY", "YEAR_MONTH", "YEAR_QUARTER", "YEAR_WEEK", "YEAR"],
+        "maxResults": 5
+      },
+      {
+        "id": "metrics",
+        "name": "Metrics",
+        "type": "METRIC",
+        "supportedTypes": ["NUMBER", "PERCENT", "CURRENCY"],
+        "maxResults": 10,
+        "minResults": 1
+      }
+    ]
+  },
+  "styleConfig": {
+    "styleGroups": [
+      {
+        "id": "dashboardStyle",
+        "name": "Dashboard Style",
+        "elements": [
+          {
+            "id": "theme",
+            "name": "Theme",
+            "type": "SELECT_SINGLE",
+            "defaultValue": "light",
+            "options": [
+              {
+                "id": "light",
+                "name": "Light"
+              },
+              {
+                "id": "dark",
+                "name": "Dark"
+              }
+            ]
+          },
+          {
+            "id": "colorPalette",
+            "name": "Color Palette",
+            "type": "SELECT_SINGLE",
+            "defaultValue": "default",
+            "options": [
+              {
+                "id": "default",
+                "name": "Default"
+              },
+              {
+                "id": "colorful",
+                "name": "Colorful"
+              },
+              {
+                "id": "monochrome",
+                "name": "Monochrome"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "chartOptions",
+        "name": "Chart Options",
+        "elements": [
+          {
+            "id": "showLegend",
+            "name": "Show Legend",
+            "type": "CHECKBOX",
+            "defaultValue": true
+          },
+          {
+            "id": "enableAnimation",
+            "name": "Enable Animation",
+            "type": "CHECKBOX",
+            "defaultValue": true
+          }
+        ]
+      }
+    ]
+  }
+}
